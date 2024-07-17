@@ -8,9 +8,11 @@
 /* Change l'espace entre les lignes de 1.5 car de base il est a 1.2 et c'est pas recommandé
 et le webkit c'est pour MACos*/
 body {
-  line-height: 1.5;
+  line-height: 1,1;
   -webkit-font-smoothing: antialiased;
+  font-family: roboto condensed;
 }
+
 /* C'est pour gérer tout ces élements dans des blocks et avec une max width de 100%*/
 img,
 picture,
@@ -40,7 +42,7 @@ h6 {
 }
 
 nav {
-  background-color: rgb(148, 147, 147);
+  background-color: rgb(255, 255, 255);
   min-height: 12vh;
   display: flex;
   flex-direction: row;
@@ -79,17 +81,91 @@ ul li a {
   color: rgb(0, 0, 0);
   font-size: 25px;
 }
+ul li a:hover {
+  color: rgb(250, 3, 3);
+  border-bottom: 1px solid rgb(250, 3, 3);
+  transition: 0.3s;
+}
 
 button {
   padding: 9px 15px;
   background-color: rgb(250, 3, 3);
-  color: rgb(245, 242, 242);
+  color: rgb(243, 235, 235);
   border: 1px solid black;
   cursor: pointer;
   text-align: center;
   font-size: 17px;
   border-radius: 15px;
   background-color: none;
+}
+
+button:hover {
+  background-color: rgb(243, 232, 232);
+  color: black;
+}
+
+/* Main */
+
+main {
+  background-color: rgb(128, 24, 24);
+  min-height: 90vh;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 50px;
+  padding: 20px;
+
+}
+.gauchemain {
+ margin-left: 5%;
+  max-width: 50%;
+}
+
+.gauchemain h1 {
+  text-align: center;
+  font-size: 7vw
+}
+
+.gauchemain p {
+  text-align: center;
+  font-size: 23px;
+}
+
+.imagemain {
+  width: 40%;
+  max-width: 500px;
+  margin-right: 5%;
+}
+
+.boutongauchemain {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+  
+}
+
+/* Carte joueur */
+
+h2 {
+  text-align: center;
+  font-size: 60px;
+  margin-top: 20px;
+}
+
+.cartejoueur{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  height: 40vh;
+  padding: 20px;
+  margin: 20px;
+  background-color: rgb(248, 7, 7);
+  border-radius: 15px;
+  
 }
 
 @media screen and (max-width: 1024px) {
@@ -107,6 +183,26 @@ button {
 
   ul li a {
     font-size: 16px;
+  }
+/* Responsive design Main Page */
+  main {
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+  }
+
+  .gauchemain, .imagemain {
+    margin: 20px 0;
+    max-width: 90%;
+  }
+
+  .gauchemain h1 {
+    font-size: 8vw;
+  }
+
+  .imagemain {
+    width: 80%;
+    order: -1; /* Place l'image en haut sur les petits écrans */
   }
 }
 
@@ -133,11 +229,40 @@ button {
     width: 37%;
     margin-top: 10px;
   }
+  main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh; /
+  }
+  .imagemain {
+    display: flex;
+    justify-content: center;
+    width: 100%; 
+  }
+  main img {
+    width: 50vw;
+  }
+
+  
 }
 
 @media screen and (max-width: 480px) {
   ul li a {
     font-size: 14px;
+  }
+
+  .gauchemain h1 {
+    font-size: 10vw;
+  }
+
+  .gauchemain p {
+    font-size: 14px;
+  }
+
+  .boutongauchemain {
+    flex-direction: column;
   }
 }
 
