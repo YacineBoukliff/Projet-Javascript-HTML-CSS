@@ -1,29 +1,53 @@
-document.addEventListener("DOMContentLoaded", function () {
-  const salahButton = document.getElementById("salah-button");
-  const salahCard = document.getElementById("salah-card");
-  let isImageShown = false;
+document.addEventListener("DOMContentLoaded", () => {
+  const salahButton = document.querySelector(".js-button");
 
-  salahButton.addEventListener("click", function () {
-    if (!isImageShown) {
-      // Sauvegardez le contenu original de la carte
-      const originalContent = salahCard.innerHTML;
-
-      // Remplacez le contenu par l'image
-      salahCard.innerHTML =
-        '<img src="Images/mohamed-salah-profile-headshot-202425.webp"alt="Mohamed Salah" style="width: 100%; height: 100%; object-fit: cover;">';
-
-      // Changez le texte du bouton
-      salahButton.textContent = "Retour à la carte";
-
-      isImageShown = true;
+  salahButton.addEventListener("click", () => {
+    if (salahButton.innerText === "Mohamed Salah") {
+      salahButton.innerText = "The Egyptian King";
+      salahButton.style.fontSize = "24px";
+      salahButton.style.background = "black";
+      salahButton.style.color = "red";
     } else {
-      // Restaurez le contenu original
-      salahCard.innerHTML = originalContent;
+      salahButton.innerText = "Mohamed Salah";
+      salahButton.style.fontSize = "16px";
+      salahButton.style.background = "red";
+      salahButton.style.color = "white";
+    }
+  });
+});
 
-      // Remettez le texte original du bouton
-      salahButton.textContent = "Mohamed Salah";
+document.addEventListener("DOMContentLoaded", () => {
+  const salahButton = document.querySelector(".js-button1");
 
-      isImageShown = false;
+  salahButton.addEventListener("click", () => {
+    if (salahButton.innerText === "Darwin Nunez") {
+      salahButton.innerText = "Darwin MERGUEZ !!!";
+      salahButton.style.fontSize = "35px";
+      salahButton.style.background = "black";
+      salahButton.style.color = "red";
+    } else {
+      salahButton.innerText = "Darwin Nunez";
+      salahButton.style.fontSize = "16px";
+      salahButton.style.background = "red";
+      salahButton.style.color = "white";
+    }
+  });
+});
+
+document.addEventListener("DOMContentLoaded", () => {
+  const salahButton = document.querySelector(".js-button2");
+
+  salahButton.addEventListener("click", () => {
+    if (salahButton.innerText === "Cody Gakpo") {
+      salahButton.innerText = "Sous coté";
+      salahButton.style.fontSize = "24px";
+      salahButton.style.background = "black";
+      salahButton.style.color = "red";
+    } else {
+      salahButton.innerText = "Cody Gakpo";
+      salahButton.style.fontSize = "16px";
+      salahButton.style.background = "red";
+      salahButton.style.color = "white";
     }
   });
 });
