@@ -1,0 +1,376 @@
+* {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  box-sizing: border-box;
+}
+
+body {
+  line-height: 1.1;
+  -webkit-font-smoothing: antialiased;
+  font-family: "Roboto Condensed", sans-serif;
+}
+
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+
+nav {
+  background-color: rgb(255, 255, 255);
+  min-height: 12vh;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 5%;
+  flex-wrap: wrap;
+}
+
+.gauche img {
+  width: 80px;
+  min-width: 30px;
+  max-width: 100%;
+  height: auto;
+}
+
+.droite {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  gap: 25px;
+}
+
+ul {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+ul li {
+  list-style: none;
+}
+
+ul li a {
+  color: rgb(0, 0, 0);
+  font-size: clamp(16px, 2vw, 25px);
+  font-weight: bold;
+}
+
+ul li a:hover {
+  color: rgb(250, 3, 3);
+  border-bottom: 1px solid rgb(250, 3, 3);
+  transition: 0.3s;
+}
+
+button {
+  padding: 12px 20px;
+  background-color: rgb(250, 3, 3);
+  color: rgb(243, 235, 235);
+  border: 1px solid black;
+  cursor: pointer;
+  text-align: center;
+  font-size: clamp(16px, 2vw, 20px);
+  border-radius: 15px;
+}
+
+button:hover {
+  background-color: rgb(243, 232, 232);
+  color: black;
+}
+
+/* Main */
+main {
+  background-color: #dc0714;
+  min-height: 90vh;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+}
+
+.gauchemain {
+  margin-left: 5%;
+  max-width: 50%;
+  text-align: center;
+}
+
+.gauchemain h1 {
+  font-size: clamp(24px, 6vw, 60px);
+  white-space: nowrap;
+}
+
+.gauchemain p {
+  font-size: clamp(16px, 2vw, 23px);
+  font-weight: bold;
+}
+
+.imagemain {
+  width: 40%;
+  max-width: 500px;
+  margin-right: 5%;
+}
+
+.boutongauchemain {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+  gap: 10px;
+}
+
+/* Carte joueur */
+section {
+  background-color: #911712;
+}
+
+h2 {
+  text-align: center;
+  font-size: clamp(40px, 8vw, 90px);
+  padding-top: 80px;
+}
+
+.cartejoueur {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: stretch;
+  gap: 70px;
+  padding: 40px 20px;
+}
+
+.cartejoueur1 {
+  background-color: rgb(255, 255, 255);
+  height: 50vh;
+  width: 43vh;
+  border: 1px solid grey;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.presentationjoueur {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 10px;
+}
+
+.textejoueur {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 10px;
+}
+
+.imagejoueur {
+  padding: 10px;
+}
+
+.imagejoueur img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.cartejoueur1 p {
+  font-size: clamp(16px, 2vw, 25px);
+  font-weight: 900;
+}
+
+.textejoueur p:nth-child(1) {
+  font-size: clamp(24px, 3vw, 40px);
+}
+
+.textejoueur p:nth-child(2) {
+  font-weight: 600;
+}
+
+.textejoueur p:nth-child(3) {
+  font-weight: 300;
+  font-size: clamp(12px, 1.5vw, 16px);
+  text-transform: uppercase;
+}
+
+.stats p {
+  text-align: center;
+  font-weight: 500;
+  font-size: clamp(18px, 2vw, 25px);
+  padding: 20px;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+}
+
+.tempsjoue,
+.apparition,
+.buts,
+.passe-d {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-top: 10px;
+  padding: 8px 7px;
+  border-bottom: 1px solid grey;
+  border-right: 1px solid grey;
+  width: 95%;
+}
+
+.tempsjoue p,
+.apparition p,
+.buts p,
+.passe-d p {
+  padding-right: 10px;
+  padding-bottom: 10px;
+}
+
+.tempsjoue p:nth-child(1),
+.apparition p:nth-child(1),
+.buts p:nth-child(1),
+.passe-d p:nth-child(1) {
+  font-weight: 300;
+  font-size: clamp(14px, 1.8vw, 20px);
+}
+
+.buttoncarte {
+  width: 100%;
+  height: 10vh;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.buttoncarte button {
+  font-size: clamp(16px, 2vw, 20px);
+  padding: 15px;
+  font-weight: 700;
+}
+
+@media screen and (max-width: 1024px) {
+  nav {
+    padding: 0 2%;
+  }
+
+  .gauche img {
+    margin-left: 0;
+  }
+
+  .droite {
+    margin-right: 0;
+  }
+
+  main {
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+  }
+
+  .gauchemain,
+  .imagemain {
+    margin: 20px 0;
+    max-width: 90%;
+  }
+
+  .imagemain {
+    width: 80%;
+    order: -1;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  nav {
+    flex-direction: column;
+    padding: 20px 5%;
+  }
+
+  .gauche {
+    margin-bottom: 20px;
+  }
+
+  .droite {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  ul {
+    display: none;
+  }
+
+  button {
+    width: 80%;
+    margin-top: 10px;
+  }
+
+  main {
+    min-height: auto;
+  }
+
+  .imagemain {
+    width: 100%;
+  }
+
+  .cartejoueur1 {
+    width: 100%;
+    max-width: none;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .gauchemain h1 {
+    font-size: clamp(20px, 8vw, 40px);
+  }
+
+  .gauchemain p {
+    font-size: clamp(14px, 4vw, 18px);
+  }
+
+  .boutongauchemain {
+    flex-direction: column;
+  }
+
+  .presentationjoueur {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .textejoueur {
+    text-align: center;
+  }
+
+  .imagejoueur {
+    margin-top: 10px;
+  }
+
+  .buttoncarte button {
+    font-size: 16px;
+    padding: 10px;
+  }
+}
