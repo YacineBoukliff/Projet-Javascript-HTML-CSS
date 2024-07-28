@@ -164,13 +164,29 @@ h2 {
 }
 
 .cartejoueur1 {
+  
   background-color: rgb(255, 255, 255);
-  height: 50vh;
-  width: 43vh;
+  height: auto; /* Changé de 60vh à auto */
+  width: 100%; /* Changé de 43vh à 100% */
+  max-width: 400px; /* Ajouté une largeur maximale */
+  margin: 0 auto;
   border: 1px solid grey;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  padding: 20px; /* Ajouté un padding */
+}
+
+.cartejoueurv2 {
+  
+  background-color: rgb(255, 255, 255);
+  height: 60vh;
+  width: 43vh;
+  border: 1px solid grey;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 0 auto
 }
 
 .presentationjoueur {
@@ -279,6 +295,150 @@ h2 {
 .jstextebutton {
   font-size: 80px;
 }
+
+/* CSS pour Slider */
+
+.swiper{
+  height: 900px; /* Changé de 900px à auto */
+  width: 100%;
+  background-color: #911712;
+  padding: 40px 0; 
+
+}
+
+.swiper-slide{
+  
+  margin-top: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /
+  
+}
+
+.joueurliverpool{
+  background-color: #911712;
+  text-align: center;
+ padding-top: 30px;
+  font-size: 80px;
+ 
+}
+
+/* formulaire */ 
+
+.background-container {
+  background-image: url('Images/Anfield\ stade.jpeg');
+  background-size: cover;
+  background-position: center;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+.form-container {
+  max-width: 600px;
+  width: 100%;
+  background-color: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(10px);
+  border-radius: 10px;
+  overflow: hidden;
+  padding: 20px;
+}
+
+.formulaire {
+  position: relative; /* Nécessaire pour le positionnement absolu du titre */
+  padding-top: 80px; 
+  border-radius: 50px;
+}
+
+.formulaire h2 {
+  color: #fff;
+  text-align: center;
+  font-size: 40px; /* Taille de police réduite */
+ 
+  margin: 0; /* Supprime les marges par défaut */
+  padding: 10px 0; /* Ajoute un peu d'espace au-dessus et en dessous du texte */
+  width: 100%; /* S'assure que le fond bleu s'étend sur toute la largeur */
+  position: absolute; /* Positionne le titre de manière absolue */
+  top: 0; /* Aligne le titre tout en haut du conteneur */
+  left: 0; /* Aligne le titre à gauche */
+}
+
+
+.formulaire form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.formulaire input {
+  padding: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 5px;
+  font-size: 16px;
+  background-color: rgba(238, 236, 236, 0.2);
+  color: #fff;
+}
+
+.formulaire input::placeholder {
+  color: rgba(0, 0, 0, 0.7);
+  font-size: 20px;
+  font-weight: 800;
+}
+
+.small-images i {
+  font-size: 50px;
+  text-align: center;
+  background-color: rgb(255, 255, 255);
+  margin: 0 10px; /* Ajoute de l'espace horizontal entre les icônes */
+  padding: 11px; /* Ajoute de l'espace à l'intérieur de chaque icône */
+  display: inline-block; /* Assure que le padding est appliqué correctement */
+  color: rgb(0, 0, 0); /* Assure une bonne visibilité sur le fond bleu */
+  border-radius: 50%; /* Optionnel : donne une forme circulaire au fond */
+}
+
+.small-images {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 20px 0; /* Garde l'espacement vertical */
+}
+.form-submit-btn {
+  padding: 10px 20px;
+  background-color: #ff0d00;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 18px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  width: 100%; /* Le bouton prend toute la largeur disponible */
+  max-width: 500px; /* Limite la largeur maximale du bouton */
+  margin: 0 auto; /* Centre le bouton horizontalement */
+  display: block; /* Assure que la marge auto fonctionne correctement */
+}
+
+.form-submit-btn:hover {
+  background-color: #ffffff;
+  color: red;
+}
+
+.bottom-image {
+  padding-top: 20px;
+ 
+  width: 80px;
+  margin: 0 auto;
+}
+
+.bottom-image img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
 @media screen and (max-width: 1024px) {
   nav {
     padding: 0 2%;
@@ -339,7 +499,7 @@ h2 {
   }
 
   .imagemain {
-    width: 100%;
+    width: 60%;
   }
 
   .cartejoueur1 {
