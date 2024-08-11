@@ -15,11 +15,11 @@ const JoueurInfo = {
     Surnom: "Diogoal",
     color: "red",
   },
-  "Luiz Diaz": {
+  "Luis Diaz": {
     Surnom: "The Colombian Wizard",
     color: "red",
   },
-  Szoboszlai: {
+  "Dominik Szoboszlai": {
     Surnom: "The Hungarian Maestro",
     color: "red",
   },
@@ -31,7 +31,7 @@ const JoueurInfo = {
     Surnom: "The Japanese Engine",
     color: "red",
   },
-  "Harvey Elliot": {
+  "Harvey Elliott": {
     Surnom: "Diamond ",
     color: "red",
   },
@@ -43,7 +43,7 @@ const JoueurInfo = {
     Surnom: "JoJoooo",
     color: "red",
   },
-  "Van Dijk": {
+  "Virgil van Dijk": {
     Surnom: "The Best Ever.",
     color: "red",
   },
@@ -51,7 +51,7 @@ const JoueurInfo = {
     Surnom: "IBOUUUU",
     color: "red",
   },
-  "Kostantinos Tsimikas": {
+  "Kostas Tsimikas": {
     Surnom: "The Greek Scouser",
     color: "red",
   },
@@ -59,7 +59,7 @@ const JoueurInfo = {
     Surnom: "The Scottish Assist King",
     color: "red",
   },
-  "Trent Alexander Arnold": {
+  "Trent Alexander-Arnold": {
     Surnom: "TAA",
     color: "red",
   },
@@ -343,25 +343,28 @@ function initialiserBoutons() {
 
   boutonJoueurs.forEach((bouton) => {
     bouton.addEventListener("click", () => {
-      const NomJoueurs = bouton.getAttribute("data-joueur-name");
-      const Joueur = JoueurInfo[NomJoueurs];
+      const nomJoueur = bouton.getAttribute("data-joueur-name");
+      console.log("Clic sur le joueur:", nomJoueur); // Pour le débogage
+      const joueur = JoueurInfo[nomJoueur];
 
-      if (Joueur) {
+      if (joueur) {
         if (bouton.classList.contains("active")) {
           // Retour à l'état initial
-          bouton.innerText = NomJoueurs;
+          bouton.innerText = nomJoueur;
           bouton.style.fontSize = "20px";
           bouton.style.background = "red";
           bouton.style.color = "white";
           bouton.classList.remove("active");
         } else {
           // Changement vers le surnom
-          bouton.innerText = Joueur.Surnom;
+          bouton.innerText = joueur.Surnom;
           bouton.style.fontSize = "24px";
           bouton.style.background = "black";
-          bouton.style.color = Joueur.color;
+          bouton.style.color = joueur.color;
           bouton.classList.add("active");
         }
+      } else {
+        console.log("Joueur non trouvé dans JoueurInfo:", nomJoueur); // Pour le débogage
       }
     });
   });

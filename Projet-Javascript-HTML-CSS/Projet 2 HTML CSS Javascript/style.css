@@ -41,7 +41,6 @@ nav {
   background-color: rgb(255, 255, 255);
   min-height: 12vh;
   display: flex;
-  flex-direction: row;
   justify-content: space-between;
   align-items: center;
   padding: 0 5%;
@@ -57,7 +56,6 @@ nav {
 
 .droite {
   display: flex;
-  flex-direction: row;
   justify-content: space-between;
   align-items: center;
   gap: 25px;
@@ -106,7 +104,6 @@ main {
   background-color: #dc0714;
   min-height: 90vh;
   display: flex;
-  flex-direction: row;
   justify-content: space-between;
   align-items: center;
   padding: 20px;
@@ -136,7 +133,6 @@ main {
 
 .boutongauchemain {
   display: flex;
-  flex-direction: row;
   justify-content: center;
   align-items: center;
   margin-top: 20px;
@@ -164,34 +160,20 @@ h2 {
 }
 
 .cartejoueur1 {
-  
   background-color: rgb(255, 255, 255);
-  height: auto; /* Changé de 60vh à auto */
-  width: 100%; /* Changé de 43vh à 100% */
-  max-width: 600px; /* Ajouté une largeur maximale */
+  height: auto;
+  width: 100%;
+  max-width: 600px;
   margin: 0 auto;
   border: 1px solid grey;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  padding: 20px; /* Ajouté un padding */
-}
-
-.cartejoueurv2 {
-  
-  background-color: rgb(255, 255, 255);
-  height: 60vh;
-  width: 43vh;
-  border: 1px solid grey;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  margin: 0 auto
+  padding: 20px;
 }
 
 .presentationjoueur {
   display: flex;
-  flex-direction: row;
   justify-content: space-between;
   padding: 10px;
 }
@@ -250,7 +232,6 @@ h2 {
 .buts,
 .passe-d {
   display: flex;
-  flex-direction: row;
   justify-content: space-between;
   margin-top: 10px;
   padding: 8px 7px;
@@ -279,7 +260,6 @@ h2 {
   width: 100%;
   height: 10vh;
   display: flex;
-  flex-direction: row;
   justify-content: center;
   align-items: center;
 }
@@ -289,68 +269,52 @@ h2 {
   padding: 15px;
   font-weight: 700;
 }
-.jota{
-  width: 500px;
-}
-
-
 
 /* CSS pour Slider */
-
-.swiper{
-  height: 900px; /* Changé de 900px à auto */
+.swiper {
+  height: 900px;
   width: 100%;
   background-color: #911712;
-  padding: 40px 0; 
-
+  padding: 40px 0;
 }
 
-.swiper-slide{
-  
+.swiper-slide {
   margin-top: 30px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    /
-  
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-.joueurliverpool{
+.joueurliverpool {
   background-color: #911712;
   text-align: center;
- padding-top: 30px;
+  padding-top: 30px;
   font-size: 80px;
- 
 }
 
-
 /* Logo des fleches Sliders */
-
-
 .custom-nav-btn::after {
-  display: none; /* Supprime l'icône par défaut de Swiper */
+  display: none;
 }
 
 .logo-slider {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  
 }
 
 /* Positionnement des boutons */
 .swiper-button-prev {
-  left: 10px; /* Ajustez selon vos besoins */
+  left: 10px;
 }
 
 .swiper-button-next {
-  right: 10px; /* Ajustez selon vos besoins */
+  right: 10px;
 }
 
-/* formulaire */ 
-
+/* formulaire */
 .background-container {
-  background-image: url('Images/Anfield\ stade.jpeg');
+  background-image: url("Images/Anfield\ stade.jpeg");
   background-size: cover;
   background-position: center;
   min-height: 100vh;
@@ -372,24 +336,22 @@ h2 {
 }
 
 .formulaire {
-  position: relative; /* Nécessaire pour le positionnement absolu du titre */
-  padding-top: 80px; 
+  position: relative;
+  padding-top: 80px;
   border-radius: 50px;
 }
 
 .formulaire h2 {
   color: #fff;
   text-align: center;
-  font-size: 40px; /* Taille de police réduite */
- 
-  margin: 0; /* Supprime les marges par défaut */
-  padding: 10px 0; /* Ajoute un peu d'espace au-dessus et en dessous du texte */
-  width: 100%; /* S'assure que le fond bleu s'étend sur toute la largeur */
-  position: absolute; /* Positionne le titre de manière absolue */
-  top: 0; /* Aligne le titre tout en haut du conteneur */
-  left: 0; /* Aligne le titre à gauche */
+  font-size: 40px;
+  margin: 0;
+  padding: 10px 0;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
 }
-
 
 .formulaire form {
   display: flex;
@@ -416,19 +378,20 @@ h2 {
   font-size: 50px;
   text-align: center;
   background-color: rgb(255, 255, 255);
-  margin: 0 10px; /* Ajoute de l'espace horizontal entre les icônes */
-  padding: 11px; /* Ajoute de l'espace à l'intérieur de chaque icône */
-  display: inline-block; /* Assure que le padding est appliqué correctement */
-  color: rgb(0, 0, 0); /* Assure une bonne visibilité sur le fond bleu */
-  border-radius: 50%; /* Optionnel : donne une forme circulaire au fond */
+  margin: 0 10px;
+  padding: 11px;
+  display: inline-block;
+  color: rgb(0, 0, 0);
+  border-radius: 50%;
 }
 
 .small-images {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin: 20px 0; /* Garde l'espacement vertical */
+  margin: 20px 0;
 }
+
 .form-submit-btn {
   padding: 10px 20px;
   background-color: #ff0d00;
@@ -438,10 +401,10 @@ h2 {
   font-size: 18px;
   cursor: pointer;
   transition: background-color 0.3s;
-  width: 100%; /* Le bouton prend toute la largeur disponible */
-  max-width: 500px; /* Limite la largeur maximale du bouton */
-  margin: 0 auto; /* Centre le bouton horizontalement */
-  display: block; /* Assure que la marge auto fonctionne correctement */
+  width: 100%;
+  max-width: 500px;
+  margin: 0 auto;
+  display: block;
 }
 
 .form-submit-btn:hover {
@@ -451,7 +414,6 @@ h2 {
 
 .bottom-image {
   padding-top: 20px;
- 
   width: 80px;
   margin: 0 auto;
 }
@@ -462,10 +424,15 @@ h2 {
   border-radius: 10px;
 }
 
-
 @media screen and (max-width: 1024px) {
   nav {
     padding: 0 2%;
+  }
+
+  .swiper-button-prev,
+  .swiper-button-next,
+  .custom-nav-btn {
+    display: none !important;
   }
 
   .gauche img {
@@ -485,14 +452,13 @@ h2 {
   .gauchemain,
   .imagemain {
     margin: 20px 0;
-
   }
 
   .imagemain {
     width: 80%;
-    
     order: -1;
   }
+
   .imagemain img {
     width: 60%;
     margin: 0 auto;
@@ -504,8 +470,13 @@ h2 {
     flex-direction: column;
     padding: 20px 5%;
   }
+  .swiper-button-prev,
+  .swiper-button-next,
+  .custom-nav-btn {
+    display: none !important;
+  }
 
-  .joueurliverpool{
+  .joueurliverpool {
     display: none;
   }
 
@@ -534,29 +505,17 @@ h2 {
   .gauchemain,
   .imagemain {
     margin: 20px 0;
-
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
   }
-
- .gauchemain{
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
- 
- }
-
- .imagemain{
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-
- }
 
   .imagemain img {
     width: 50%;
     margin: 0 auto;
   }
-  
-  .titremain, 
+
+  .titremain,
   .gauchemain p {
     display: none;
   }
@@ -566,18 +525,18 @@ h2 {
     height: 100%;
     max-width: none;
   }
+
   .boutongauchemain {
-   display: flex;
-   justify-content: center;
+    display: flex;
+    justify-content: center;
   }
 
   .boutongauchemain button {
-    font-size: 16px; /* Réduit légèrement la taille de la police sur les petits écrans */
-    padding: 12px 70px; /* Ajuste le padding pour les petits écrans */
-    width: 100%; /* Fait occuper toute la largeur disponible sur les petits écrans */
-    max-width: 300px; /* Limite la largeur maximale */
+    font-size: 16px;
+    padding: 12px 70px;
+    width: 100%;
+    max-width: 300px;
   }
-  
 }
 
 @media screen and (max-width: 480px) {
@@ -585,13 +544,11 @@ h2 {
     font-size: clamp(20px, 8vw, 40px);
   }
 
-
   .boutongauchemain button {
-    
-    font-size: 16px; /* Réduit légèrement la taille de la police sur les petits écrans */
-    padding: 12px 40px; /* Ajuste le padding pour les petits écrans */
-    width: 100%; /* Fait occuper toute la largeur disponible sur les petits écrans */
-    max-width: 300px; /* Limite la largeur maximale */
+    font-size: 16px;
+    padding: 12px 40px;
+    width: 100%;
+    max-width: 300px;
   }
 
   .gauchemain p {
@@ -628,48 +585,10 @@ h2 {
 }
 
 @media screen and (max-width: 350px) {
-  .gauchemain h1 {
-    font-size: clamp(20px, 8vw, 40px);
-  }
-
-  .gauchemain p {
-    font-size: clamp(14px, 4vw, 18px);
-  }
-
-  .boutongauchemain {
-    flex-direction: column;
-  }
-
   .boutongauchemain button {
-    
-    font-size: 16px; /* Réduit légèrement la taille de la police sur les petits écrans */
-    padding: 12px 20px; /* Ajuste le padding pour les petits écrans */
-    width: 100%; /* Fait occuper toute la largeur disponible sur les petits écrans */
-    max-width: 300px; /* Limite la largeur maximale */
-  }
-
-
-  .presentationjoueur {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .textejoueur {
-    text-align: center;
-  }
-
-  .imagejoueur {
-    margin-top: 10px;
-  }
-
-  .buttoncarte button {
     font-size: 16px;
-    padding: 10px;
-  }
-
-  .cartejoueur1 {
+    padding: 12px 20px;
     width: 100%;
-    height: 80%;
-    max-width: none;
+    max-width: 300px;
   }
 }
