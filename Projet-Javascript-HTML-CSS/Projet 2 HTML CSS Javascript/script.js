@@ -1,7 +1,7 @@
 document.addEventListener("DOMContentLoaded", () => {
   const salahButtons = document.querySelectorAll(".js-button");
 
-  salahButtons.forEach(salahButton => {
+  salahButtons.forEach((salahButton) => {
     salahButton.addEventListener("click", () => {
       if (salahButton.innerHTML === "Mohamed Salah") {
         salahButton.innerText = "The Egyptian King";
@@ -18,38 +18,34 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 });
 
-
-
-
-const swiper = new Swiper('.swiper', {
+const swiper = new Swiper(".swiper", {
   pagination: {
-    el: '.swiper-pagination',
+    el: ".swiper-pagination",
     clickable: true,
   },
-  
+
   navigation: {
-    nextEl: '.swiper-button-next',
-    prevEl: '.swiper-button-prev',
+    nextEl: ".swiper-button-next",
+    prevEl: ".swiper-button-prev",
   },
-  
+
   slidesPerView: 3,
   loop: true,
 
   autoplay: {
-    delay: 3000,
+    delay: 1600,
     disableOnInteraction: false,
     pauseOnMouseEnter: true,
   },
-  speed: 600,
+  speed: 700,
   breakpoints: {
-
     320: {
       slidesPerView: 1,
-      spaceBetween: 10
+      spaceBetween: 10,
     },
     480: {
       slidesPerView: 1,
-      spaceBetween: 20
+      spaceBetween: 20,
     },
     640: {
       slidesPerView: 1,
@@ -62,8 +58,6 @@ const swiper = new Swiper('.swiper', {
     1366: {
       slidesPerView: 3,
       spaceBetween: 50,
-    }
+    },
   },
-  
-  
 });

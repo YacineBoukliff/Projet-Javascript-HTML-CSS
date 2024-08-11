@@ -168,7 +168,7 @@ h2 {
   background-color: rgb(255, 255, 255);
   height: auto; /* Changé de 60vh à auto */
   width: 100%; /* Changé de 43vh à 100% */
-  max-width: 400px; /* Ajouté une largeur maximale */
+  max-width: 600px; /* Ajouté une largeur maximale */
   margin: 0 auto;
   border: 1px solid grey;
   display: flex;
@@ -288,6 +288,9 @@ h2 {
   font-size: clamp(16px, 2vw, 20px);
   padding: 15px;
   font-weight: 700;
+}
+.jota{
+  width: 500px;
 }
 
 /* CSS pour JS */
@@ -461,12 +464,17 @@ h2 {
   .gauchemain,
   .imagemain {
     margin: 20px 0;
-    max-width: 90%;
+
   }
 
   .imagemain {
     width: 80%;
+    
     order: -1;
+  }
+  .imagemain img {
+    width: 60%;
+    margin: 0 auto;
   }
 }
 
@@ -474,6 +482,10 @@ h2 {
   nav {
     flex-direction: column;
     padding: 20px 5%;
+  }
+
+  .joueurliverpool{
+    display: none;
   }
 
   .gauche {
@@ -498,8 +510,34 @@ h2 {
     min-height: auto;
   }
 
+  .gauchemain,
   .imagemain {
-    width: 60%;
+    margin: 20px 0;
+
+  }
+
+ .gauchemain{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+ 
+ }
+
+ .imagemain{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+ }
+
+  .imagemain img {
+    width: 50%;
+    margin: 0 auto;
+  }
+  
+  .titremain, 
+  .gauchemain p {
+    display: none;
   }
 
   .cartejoueur1 {
@@ -507,11 +545,32 @@ h2 {
     height: 100%;
     max-width: none;
   }
+  .boutongauchemain {
+   display: flex;
+   justify-content: center;
+  }
+
+  .boutongauchemain button {
+    font-size: 16px; /* Réduit légèrement la taille de la police sur les petits écrans */
+    padding: 12px 70px; /* Ajuste le padding pour les petits écrans */
+    width: 100%; /* Fait occuper toute la largeur disponible sur les petits écrans */
+    max-width: 300px; /* Limite la largeur maximale */
+  }
+  
 }
 
 @media screen and (max-width: 480px) {
   .gauchemain h1 {
     font-size: clamp(20px, 8vw, 40px);
+  }
+
+
+  .boutongauchemain button {
+    
+    font-size: 16px; /* Réduit légèrement la taille de la police sur les petits écrans */
+    padding: 12px 40px; /* Ajuste le padding pour les petits écrans */
+    width: 100%; /* Fait occuper toute la largeur disponible sur les petits écrans */
+    max-width: 300px; /* Limite la largeur maximale */
   }
 
   .gauchemain p {
@@ -559,6 +618,15 @@ h2 {
   .boutongauchemain {
     flex-direction: column;
   }
+
+  .boutongauchemain button {
+    
+    font-size: 16px; /* Réduit légèrement la taille de la police sur les petits écrans */
+    padding: 12px 20px; /* Ajuste le padding pour les petits écrans */
+    width: 100%; /* Fait occuper toute la largeur disponible sur les petits écrans */
+    max-width: 300px; /* Limite la largeur maximale */
+  }
+
 
   .presentationjoueur {
     flex-direction: column;
