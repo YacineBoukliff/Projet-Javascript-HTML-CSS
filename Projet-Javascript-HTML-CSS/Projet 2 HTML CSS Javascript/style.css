@@ -293,11 +293,7 @@ h2 {
   width: 500px;
 }
 
-/* CSS pour JS */
 
-.jstextebutton {
-  font-size: 80px;
-}
 
 /* CSS pour Slider */
 
@@ -325,6 +321,30 @@ h2 {
  padding-top: 30px;
   font-size: 80px;
  
+}
+
+
+/* Logo des fleches Sliders */
+
+
+.custom-nav-btn::after {
+  display: none; /* Supprime l'icône par défaut de Swiper */
+}
+
+.logo-slider {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  
+}
+
+/* Positionnement des boutons */
+.swiper-button-prev {
+  left: 10px; /* Ajustez selon vos besoins */
+}
+
+.swiper-button-next {
+  right: 10px; /* Ajustez selon vos besoins */
 }
 
 /* formulaire */ 
@@ -441,6 +461,7 @@ h2 {
   height: auto;
   border-radius: 10px;
 }
+
 
 @media screen and (max-width: 1024px) {
   nav {
