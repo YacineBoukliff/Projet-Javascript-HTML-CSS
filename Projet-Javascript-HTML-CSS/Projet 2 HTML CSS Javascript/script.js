@@ -286,7 +286,7 @@ const joueurs = [
 
 function genererCarteJoueur(joueur) {
   return `
-    <div class="swiper-slide">
+    <div data-aos="fade-up" class="swiper-slide">
       <div class="cartejoueur1">
         <div class="presentationjoueur">
           <div class="textejoueur">
@@ -371,6 +371,7 @@ function initialiserBoutons() {
 }
 
 document.addEventListener("DOMContentLoaded", () => {
+  AOS.init();
   genererToutesLesCartes();
   initialiserBoutons();
 
