@@ -344,7 +344,7 @@ function initialiserBoutons() {
   boutonJoueurs.forEach((bouton) => {
     bouton.addEventListener("click", () => {
       const nomJoueur = bouton.getAttribute("data-joueur-name");
-      console.log("Clic sur le joueur:", nomJoueur); // Pour le débogage
+      console.log("Clic sur le joueur:", nomJoueur);
       const joueur = JoueurInfo[nomJoueur];
 
       if (joueur) {
@@ -364,14 +364,14 @@ function initialiserBoutons() {
           bouton.classList.add("active");
         }
       } else {
-        console.log("Joueur non trouvé dans JoueurInfo:", nomJoueur); // Pour le débogage
+        console.log("Joueur non trouvé dans JoueurInfo:", nomJoueur);
       }
     });
   });
 }
 
 document.addEventListener("DOMContentLoaded", () => {
-  AOS.init();
+  AOS.init(); /* Fonction qui active la librairie AOS */
   genererToutesLesCartes();
   initialiserBoutons();
 
@@ -390,7 +390,7 @@ document.addEventListener("DOMContentLoaded", () => {
       disableOnInteraction: false,
       pauseOnMouseEnter: true,
     },
-    speed: 700,
+    speed: 900,
     breakpoints: {
       320: { slidesPerView: 1, spaceBetween: 10 },
       480: { slidesPerView: 1, spaceBetween: 20 },
